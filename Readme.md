@@ -1,7 +1,7 @@
-## MLX90640 Thermal Camera Setup with Raspberry Pi 4
-This is MLX90640 Thermal Camera Setup created using MLX90640 Thermal Camera from waveshare and raspberry pi 4 along with sunfounders lcd screen
+# MLX90640 Thermal Camera Setup with Raspberry Pi 4
+This is MLX90640 Thermal Camera Setup created using MLX90640 Thermal Camera from waveshare and raspberry pi 4 along with sunfounders LCD screen create for Tata Power Plant for Monitoring Temperatures of Capacitor Banks
 
-# Setup 
+## Setup 
 The Setup includes the following tasks
 
 1. Enable I2C and SPI from Raspberry Home > Raspberry pi Configuration > Interfaces > Enable SPI and I2C and reboot
@@ -13,28 +13,39 @@ sudo nano /bin/firmware/config.txt
 ```
 
 3. Set Static IP for Raspberry PI
+```
+In Bookworm:
+- click the network icon
+- advanced
+- edit connections
+- wired
+- set the IP under the IPv4 tab
+(at least thats what worked for me)
+```
+Refer this for more details https://forums.raspberrypi.com/viewtopic.php?t=357678
 
 4. Create a Virtual Environment 
 ```bash
 cd Desktop
 python -m venv myenv
 ```
+
 Activate the environment 
 ```bash
 source bin/activate
 ```
 
 5. Download this complete repository as a zip and unzip it using 
-'''bash 
+```bash 
 unzip 
-'''
+```
 
 6. Install the Requirements
 ```python 
 pip install -r requirements.txt
 ```
 
-# How to run the setup 
+## How to run the setup 
 1. In order to get the feed on the raspberry pi lcd screen run the ```thermal_real_feed.py``` script
 ```python
 python thermal_real_feed.py 
