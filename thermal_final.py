@@ -17,7 +17,7 @@ PHONE_NO = "+19096554220"
 def send_message(temp):
     client = Client(ACCOUNT_SID, AUTH_TOKEN)
     message = client.messages.create(
-        body="Assalamu Alaikum !! Abdul Khalik. The temperature has exeeded the limit, current temp is " + str(temp),
+        body="The temperature has exeeded the limit, current temp is " + str(temp),
         from_="+19096554220",
         to="+919326383639",
         # to="+919767771805",
